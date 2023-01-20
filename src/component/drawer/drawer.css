@@ -1,25 +1,10 @@
-
 .container {
-    position: relative;
-    color: white;
-    /*Note, you can change the color to your choice depending on your 
-    image and what color blends with it*/
-}
-
-.container::after {
-    content: "";
-    opacity: 0.8;
-    background: rgb(26, 31, 41) url("../../images/web4.jpg") no-repeat fixed top;
-    background-blend-mode: luminosity;
-    /* also change the blend mode to what suits you, from darken, to other 
-    many options as you deem fit*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/web4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    /* top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
+    background-blend-mode: luminosity;
+    background-size: cover;
     position: absolute;
     z-index: -1;
-    height: 100vh;
-    width: 100%;
 }
