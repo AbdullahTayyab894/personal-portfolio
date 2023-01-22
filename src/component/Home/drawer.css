@@ -8,3 +8,11 @@
     position: absolute;
     z-index: -1;
 }
+
+@media (max-width:700px) {
+    .drawer {
+        display: "block";
+        /* flex-direction: column; */
+
+    }
+}
