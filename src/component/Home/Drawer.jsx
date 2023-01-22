@@ -1,7 +1,8 @@
 import React from 'react'
 import {Box,} from '@mui/material'
 import Main from './DrawerSidebar'
-import About from './DrawerAbout'
+import DrawerAbout from './DrawerAbout'
+import About from '../About/About'
 
 const Drawer = () => {
     return (
@@ -11,7 +12,7 @@ const Drawer = () => {
                 flexDirection: "row"
             }}>
                 <Main />
-                <About />
+                <DrawerAbout />
             </Box>
         </>
     )
