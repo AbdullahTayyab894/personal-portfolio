@@ -58,11 +58,16 @@ const Main = () => {
                         }
                     }}>What I Do</Typography>
                 </Link>
-                <Typography lineHeight="2.5em" sx={{
-                    '&:hover': {
-                        color: "#20c997",
-                    }
-                }}>Resume</Typography>
+                <Link to="/resume" style={{
+                    textDecoration: "none",
+                    color: "white"
+                }}>
+                    <Typography lineHeight="2.5em" sx={{
+                        '&:hover': {
+                            color: "#20c997",
+                        }
+                    }}>Resume</Typography>
+                </Link>
                 <Typography lineHeight="2.5em" sx={{
                     '&:hover': {
                         color: "#20c997",
