@@ -26,14 +26,12 @@ const Projects = () => {
                             const { name, img, image, url } = item;
                             return (
                                 <Grid item xs={12} sm={6} md={4} >
-                                    {/* <Card > */}
                                         <div className="container">
                                             <img src={img}  className="image" width="100%" />
                                                 <div className="middle">
                                                     <div className="text">John Doe</div>
                                                 </div>
                                         </div>
-                                    {/* </Card> */}
                                 </Grid>
                             )
                         })
@@ -44,18 +42,4 @@ const Projects = () => {
     )
 }
 export default Projects
-{/* <CardContent>
-                            <Typography gutterBottom variant="h5" component="">
-                                {name}
-                            </Typography>
-                            <a href={item.url} target="_blank" style={{
-                                textDecoration: "none"
-                            }}>
-                                <Button variant='contained' sx={{
-                                    width: "130px",
-                                    color: "white",
-                                }}>
-                                    Open
-                                </Button>
-                            </a>
-                        </CardContent> */}
+
