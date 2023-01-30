@@ -7,7 +7,7 @@ const Contact = () => {
     <>
     <Main />
     <Box marginLeft="250px">
-contact
+contact me
     </Box>
     </>
   )
