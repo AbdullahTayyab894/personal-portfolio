@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Main from '../Home/DrawerSidebar'
 
@@ -8,6 +8,9 @@ const Contact = () => {
     <Main />
     <Box marginLeft="250px">
 contact me
+<Typography>
+  name
+</Typography>
     </Box>
     </>
   )
