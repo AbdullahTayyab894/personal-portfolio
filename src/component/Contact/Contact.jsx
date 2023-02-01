@@ -11,6 +11,15 @@ contact me
 <Typography>
   name
 </Typography>
+<Typography>
+  name
+</Typography><Typography>
+  name
+</Typography><Typography>
+  name
+</Typography><Typography>
+  name
+</Typography>
     </Box>
     </>
   )
