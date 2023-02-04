@@ -78,21 +78,6 @@ const Main = () => {
                         }
                     }}>Portfolio</Typography>
                 </Link>
-                {/* <Typography lineHeight="2.5em" sx={{
-                    '&:hover': {
-                        color: "#20c997",
-                    }
-                }}>Testimonial</Typography> */}
-                <Link to="/contact" style={{
-                    textDecoration: "none",
-                    color: "white"
-                }}>
-                    <Typography lineHeight="2.5em" sx={{
-                        '&:hover': {
-                            color: "#20c997",
-                        }
-                    }}>Contact</Typography>
-                </Link>
                 <Box sx={{
                     display: "flex",
                     flexDirection: "row",

@@ -5,7 +5,6 @@ import About from "./component/About/About";
 import Services from './component/Services/Services'
 import Resume from "./component/Resume/Resume";
 import Projects from './component/Portfolio/Projects';
-import Contact from "./component/Contact/Contact";
 function App() {
   return (
     <div className="App">
@@ -16,7 +15,6 @@ function App() {
           <Route path="/service" element={<Services />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/project" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>
