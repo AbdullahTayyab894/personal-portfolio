@@ -8,8 +8,9 @@ import './project.css'
 const ProjectsDisplay = () => {
   return (
     <>
+    <Grid container>
       <Main />
-      <Box marginLeft="250px" sx={{
+      <Grid xs={12} md={10} sx={{
         background: "#f8f9fa"
       }}>
         <Typography variant='h3' sx={{
@@ -127,7 +128,8 @@ const ProjectsDisplay = () => {
             )
           })
         }
-      </Box>
+      </Grid>
+    </Grid>
     </>
   )
 }

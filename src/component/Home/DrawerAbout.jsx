@@ -1,20 +1,19 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation';
 import './drawer.css'
 
 const DrawerAbout = () => {
     return (
         <>
-            <Box className="container"
+            <Grid item xs={12} md={10} className="container"
                 sx={{
                     color: "white",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     height: "100vh",
-                    marginLeft: "250px",
-                    width: "calc(100% - 250px)",
+                    paddingLeft:"50px"
                 }}>
                 <Box textAlign="center" >
                     <Typography variant='h4'>Welcome</Typography>
@@ -27,7 +26,7 @@ const DrawerAbout = () => {
                     />
                     <Typography variant='h5'>Based in Kasur,Pakistan</Typography>
                 </Box>
-            </Box>
+            </Grid>
         </>
     )
 }

@@ -5,6 +5,5 @@
     background-size: cover;
     background-blend-mode: luminosity;
     background-size: cover;
-    position: absolute;
     z-index: -1;
 }

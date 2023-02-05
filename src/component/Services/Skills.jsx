@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography,Grid } from '@mui/material'
 import React from 'react'
 import Main from '../Home/DrawerSidebar'
 import { SkillApi } from './SkillAPi'
@@ -6,13 +6,13 @@ import { SkillApi } from './SkillAPi'
 const Skills = () => {
     return (
         <>
+        <Grid container>
             <Main />
-            <Box sx={{
+            <Grid xs={12} md={10} sx={{
                 height: "100%",
                 display: "flex",
                 flexWrap: "wrap",
                 background: "#f8f9fa",
-                marginLeft: "250px",
                 justifyContent: "space-around"
             }}>
                 {
@@ -51,7 +51,8 @@ const Skills = () => {
                         )
                     })
                 }
-            </Box>
+            </Grid>
+        </Grid>
         </>
     )
 }

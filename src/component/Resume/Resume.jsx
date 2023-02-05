@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from '@mui/material'
+import { Box, Typography, Button,Grid } from '@mui/material'
 import React from 'react'
 import DownloadIcon from '@mui/icons-material/Download';
 import Main from '../Home/DrawerSidebar'
@@ -25,9 +25,11 @@ const onDownloadResume = () => {
 const Resume = () => {
     return (
         <>
+        <Grid container>
             <Main />
-            <Box sx={{
-                paddingLeft: "250px"
+            <Grid xs={12} md={9} sx={{
+                    paddingLeft: "30px",
+                    paddingRight: "30px",
             }}>
                 <Typography variant='h5' paddingTop="20px" fontWeight="bold" textAlign="center">My Education</Typography>
                 <Box sx={{
@@ -36,10 +38,10 @@ const Resume = () => {
                     justifyContent: "space-around",
                     alignItems: "center",
                     textAlign: "justify",
-                    paddingTop: "30px"
+                    paddingTop: "30px",
                 }}>
                     <Box sx={{
-                        width: "450px",
+                        maxWidth: "450px",
                         border: "1px solid #EBECF0",
                         borderRadius: "10px",
                         padding: "20px"
@@ -163,7 +165,7 @@ const Resume = () => {
                         justifyContent: "space-around",
                         flexWrap: "wrap",
                         width: "100%",
-                        marginBottom: "30px"
+                        marginBottom: "30px",
                     }}>
                         <Box sx={{
                             width: "450px",
@@ -197,7 +199,7 @@ const Resume = () => {
                         justifyContent: "space-around",
                         flexWrap: "wrap",
                         width: "100%",
-                        marginBottom: "30px"
+                        marginBottom: "30px",
                     }}>
                         <Box sx={{
                             width: "450px",
@@ -264,7 +266,7 @@ const Resume = () => {
                         width: "190px",
                         margin: "auto",
                         marginBottom: "30px",
-                        paddingTop: "30px"
+                        paddingTop: "30px",
                     }}>
                         <Button
                             endIcon={<DownloadIcon />}
@@ -282,7 +284,8 @@ const Resume = () => {
                             onClick={onDownloadResume}>Download CV</Button>
                     </Box>
                 </Box>
-            </Box>
+            </Grid>
+        </Grid>
         </>
     )
 }
