@@ -3,6 +3,7 @@ import React from 'react'
 import Main from '../Home/DrawerSidebar'
 import DownloadIcon from '@mui/icons-material/Download';
 import CountUp from 'react-countup';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const About = () => {
 
@@ -60,7 +61,7 @@ const About = () => {
             }}> abdullahtayyab894@gmail.com</span></Typography>
             <Typography color="#4C4D4D" lineHeight="3em" borderBottom="1px solid #eaeaea">  <span style={{
               fontWeight: "bold"
-            }}>Age:</span> 28</Typography>
+            }}>Age:</span> 23</Typography>
             <Typography color="#4C4D4D" lineHeight="3em" borderBottom="1px solid #eaeaea">  <span style={{
               fontWeight: "bold"
             }}>From:</span> Kasur,Panjab,Pakistan</Typography>
@@ -123,6 +124,17 @@ const About = () => {
             </Typography>
             <Typography variant='h5'>Projects Completed</Typography>
           </Box>
+        </Box>
+        <Box sx={{
+          position: "absolute",
+          right: "0px",
+          bottom: "50px"
+        }}>
+          <WhatsAppIcon sx={{
+            color: "white",
+            fontSize: "50px",
+            background: "#20c997"
+          }} />
         </Box>
       </Box>
     </>

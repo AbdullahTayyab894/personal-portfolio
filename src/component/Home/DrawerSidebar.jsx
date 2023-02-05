@@ -1,12 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Avatar, Box, Typography } from '@mui/material'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import my2 from '../../images/my2.jpeg'
 import { Link } from 'react-router-dom';
-
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Main = () => {
     return (
@@ -28,21 +27,21 @@ const Main = () => {
                         border: "7px solid #393E46"
                     }} />
                 <Typography lineHeight="4em">Abdullah Tayyab</Typography>
-                <Link to="/" style={{
+                <Link to="/" className="tab" style={{
                     textDecoration: "none",
                     color: "white"
                 }}>
-                    <Typography lineHeight="2.5em" sx={{
+                    <Typography lineHeight="3em" sx={{
                         '&:hover': {
                             color: "#20c997",
-                        }
-                    }}>Home</Typography>
+                        },
+                    }} >Home</Typography>
                 </Link>
-                <Link to="/about" style={{
+                <Link to="/about" className="tab" style={{
                     textDecoration: "none",
                     color: "white"
                 }}>
-                    <Typography lineHeight="2.5em" sx={{
+                    <Typography lineHeight="3em" sx={{
                         '&:hover': {
                             color: "#20c997",
                         }
@@ -52,7 +51,7 @@ const Main = () => {
                     textDecoration: "none",
                     color: "white"
                 }}>
-                    <Typography lineHeight="2.5em" sx={{
+                    <Typography lineHeight="3em" sx={{
                         '&:hover': {
                             color: "#20c997",
                         }
@@ -62,7 +61,7 @@ const Main = () => {
                     textDecoration: "none",
                     color: "white"
                 }}>
-                    <Typography lineHeight="2.5em" sx={{
+                    <Typography lineHeight="3em" sx={{
                         '&:hover': {
                             color: "#20c997",
                         }
@@ -72,7 +71,7 @@ const Main = () => {
                     textDecoration: "none",
                     color: "white"
                 }}>
-                    <Typography lineHeight="2.5em" sx={{
+                    <Typography lineHeight="3em" sx={{
                         '&:hover': {
                             color: "#20c997",
                         }
@@ -81,20 +80,39 @@ const Main = () => {
                 <Box sx={{
                     display: "flex",
                     flexDirection: "row",
+                    paddingTop: "20px",
                     justifyContent: "space-evenly",
                 }}>
-                    <Avatar sx={{
-                        background: "transparent"
-                    }}><FacebookOutlinedIcon /></Avatar>
-                    <Avatar sx={{
-                        background: "transparent"
-                    }}><TwitterIcon /></Avatar>
-                    <Avatar sx={{
-                        background: "transparent"
-                    }}><GitHubIcon /></Avatar>
-                    <Avatar sx={{
-                        background: "transparent"
-                    }}><LinkedInIcon /></Avatar>
+                    <a href="https://www.facebook.com/this.abdullah.8/" target="_blank">
+                        <Avatar sx={{
+                            background: "transparent"
+                        }}>
+                            <FacebookOutlinedIcon />
+                        </Avatar>
+                    </a>
+
+                    <a href="https://github.com/AbdullahTayyab894" target="_blank">
+                        <Avatar sx={{
+                            background: "transparent"
+                        }}>
+                            <GitHubIcon />
+                        </Avatar>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/abdullahtayyab894/" target="_blank">
+                        <Avatar sx={{
+                            background: "transparent"
+                        }}>
+                            <LinkedInIcon />
+                        </Avatar>
+                    </a>
+                    <a href="https://wa.me/+923184579618" target="_blank">
+                        <Avatar sx={{
+                            background: "transparent"
+                        }}>
+                            <WhatsAppIcon />
+                        </Avatar>
+                    </a>
                 </Box>
             </Box>
         </>
