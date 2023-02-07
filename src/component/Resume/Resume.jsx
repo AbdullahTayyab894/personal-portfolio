@@ -17,11 +17,11 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     },
 }));
 
-const onDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = './Abdullah Tayyab Resume.pdf';
-    link.click();
-};
+// const onDownloadResume = () => {
+//     const link = document.createElement("a");
+//     link.href = './Abdullah Tayyab Resume.pdf';
+//     link.click();
+// };
 const Resume = () => {
     return (
         <>
@@ -262,7 +262,7 @@ const Resume = () => {
                             <BorderLinearProgress variant="determinate" value={80} />
                         </Box>
                     </Box>
-                    <Box sx={{
+                    {/* <Box sx={{
                         width: "190px",
                         margin: "auto",
                         marginBottom: "30px",
@@ -282,7 +282,7 @@ const Resume = () => {
                                 }
                             }}
                             onClick={onDownloadResume}>Download CV</Button>
-                    </Box>
+                    </Box> */}
                 </Box>
             </Grid>
         </Grid>
