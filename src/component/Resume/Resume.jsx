@@ -1,7 +1,5 @@
-import { Box, Typography, Button,Grid } from '@mui/material'
+import { Box, Typography,Grid } from '@mui/material'
 import React from 'react'
-import DownloadIcon from '@mui/icons-material/Download';
-import Main from '../Home/DrawerSidebar'
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
@@ -16,22 +14,14 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'light' ? '#20c997' : '#308fe8',
     },
 }));
-
-// const onDownloadResume = () => {
-//     const link = document.createElement("a");
-//     link.href = './Abdullah Tayyab Resume.pdf';
-//     link.click();
-// };
 const Resume = () => {
     return (
         <>
-        <Grid container>
-            <Main />
-            <Grid xs={12} md={9} sx={{
-                    paddingLeft: "30px",
-                    paddingRight: "30px",
+        <Grid container id="resume">
+            <Grid xs={12} md={12} sx={{
+                    padding: "30px 30px 30px 30px",
             }}>
-                <Typography variant='h5' paddingTop="20px" fontWeight="bold" textAlign="center">My Education</Typography>
+                <Typography variant='h4' paddingTop="20px" fontWeight="bold" textAlign="center">My Education</Typography>
                 <Box sx={{
                     display: "flex",
                     flexWrap: "wrap",

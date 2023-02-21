@@ -1,6 +1,5 @@
 import { Typography, Box, Button, Grid } from '@mui/material'
 import React from 'react'
-import Main from '../Home/DrawerSidebar'
 import DownloadIcon from '@mui/icons-material/Download';
 import CountUp from 'react-countup';
 
@@ -19,13 +18,12 @@ const About = () => {
 
   return (
     <>
-      <Grid container>
-        <Main />
-        <Grid item xs={12} md={10} >
+      <Grid container id="about">
+        <Grid item xs={12} md={12} >
           <Typography variant='h4' sx={{
             textAlign: "center",
             fontWeight: "bold",
-            paddingTop: "50px"
+            paddingTop: "70px"
           }}>
             Know Me More
           </Typography>
@@ -37,7 +35,6 @@ const About = () => {
           }}>
             <Box sx={{
               maxWidth: "600px",
-              // textAlign:"center"
             }}>
               <Typography variant='h4' fontWeight="bold" textAlign="center">I'm <span style={{
                 color: "#20c997",

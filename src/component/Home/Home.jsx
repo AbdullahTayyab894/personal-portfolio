@@ -1,19 +1,18 @@
 import React from 'react'
 import { Box, Grid, Typography } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation';
-import './drawer.css'
+import './home.css'
 
 const DrawerAbout = () => {
     return (
         <>
-            <Grid item xs={12} md={10} className="container"
+            <Grid item xs={12} md={12} className="container" id="home"
                 sx={{
                     color: "white",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     height: "100vh",
-                    paddingLeft:"50px"
                 }}>
                 <Box textAlign="center" >
                     <Typography variant='h4'>Welcome</Typography>

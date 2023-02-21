@@ -1,30 +1,31 @@
-import { Box, Typography,Grid } from '@mui/material'
+import { Box, Typography, Grid } from '@mui/material'
 import React from 'react'
-import Main from '../Home/DrawerSidebar'
 import { SkillApi } from './SkillAPi'
 
 const Skills = () => {
     return (
-        <>
-        <Grid container>
-            <Main />
-            <Grid xs={12} md={10} sx={{
-                height: "100%",
-                display: "flex",
-                flexWrap: "wrap",
-                background: "#f8f9fa",
-                justifyContent: "space-around"
+        <div style={{
+            background: "#f8f9fa",
+        }}>
+            <Typography variant='h3' sx={{
+                color: "black",
+                textAlign: "center",
+                padding: "30px 0px 30px 0px"
             }}>
+                What I Do?
+            </Typography>
+            <Grid container id="skill" >
                 {
                     SkillApi.map((item, i) => {
                         const { id, name, img } = item;
                         return (
-                            <Box sx={{
+                            <Grid item sm={4} md={3} sx={{
                                 width: "300px",
                                 height: "280px",
                                 background: "white",
-                                margin: "15px"
-
+                                margin: "15px",
+                                margin: "auto",
+                                background: "#f8f9fa",
                             }}>
                                 <img src={img} alt="" width="200px" height="200px" style={{
                                     display: "block",
@@ -44,16 +45,14 @@ const Skills = () => {
                                         borderBottom: "3px solid #20c997",
 
                                     }}>
-
                                     </Box>
                                 </Typography>
-                            </Box>
+                            </Grid>
                         )
                     })
                 }
             </Grid>
-        </Grid>
-        </>
+        </div>
     )
 }
 
