@@ -1,19 +1,26 @@
 import React from 'react'
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation';
-import './home.css'
+import web4 from "../../images/web4.jpg"
 
 const DrawerAbout = () => {
+
+    const divStyle = {
+        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${web4})`,
+        backgroundSize: 'cover',
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+    };
+
     return (
-        <>
-            <Grid item xs={12} md={12} className="container" id="home"
-                sx={{
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "100vh",
-                }}>
+        <div style={divStyle} >
+            <Box id="home" >
                 <Box textAlign="center" >
                     <Typography variant='h4'>Welcome</Typography>
                     <TypeAnimation
@@ -25,8 +32,8 @@ const DrawerAbout = () => {
                     />
                     <Typography variant='h5'>Based in Kasur,Pakistan</Typography>
                 </Box>
-            </Grid>
-        </>
+            </Box>
+        </div>
     )
 }
 

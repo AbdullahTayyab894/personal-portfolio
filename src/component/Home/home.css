@@ -1,9 +1,0 @@
-.container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/web4.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: luminosity;
-    background-size: cover;
-    z-index: -1;
-}

@@ -1,16 +1,24 @@
-import React from 'react'
-import { Typography, Grid, Box } from '@mui/material'
+import React, { useState } from 'react'
+import { Typography, Box, Button } from '@mui/material'
 import { projectdata } from './projectapi'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import './project.css'
+import { Link } from 'react-router-dom';
 
 
 const ProjectsDisplay = () => {
+
+  const [limit, setLimit] = useState(4);
   return (
     <>
-      <Grid container id="project" margin="50px 0px 50px 0px">
-        <Grid xs={12} md={12} sx={{
-          background: "#f8f9fa",
+      <Box sx={{
+        width: "100%",
+        background: "#f8f9fa",
+        paddingBottom:"50px"
+      }}>
+        <Box sx={{
+          width: "60rem",
+          margin: "auto"
         }}>
           <Typography variant='h3' sx={{
             color: "black",
@@ -20,115 +28,77 @@ const ProjectsDisplay = () => {
             Projects
           </Typography>
           {
-            projectdata.map((item, i) => {
+            projectdata.slice(0, limit).map((item, i) => {
               const { name, img, url, id, detail } = item;
               return (
                 <Box >
                   {
                     id % 2 !== 0 ? (
-                      <Grid container sx={{
-                        width: "100%",
-                        justifyContent: "space-evenly",
-                        alignItems: "center",
-                        marginBottom: "40px",
-                      }}>
-                        <Grid item sm={4} md={5} sx={{
-                          background: "white",
-                          minHeight: "300px",
-                          padding: "20px",
-                          borderRadius: "5px",
-                          boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"
-                        }}>
-                          <Box sx={{
-                            display: "flex",
-                          }}>
-                            <Typography variant='h4' sx={{
+                      <Box className='blog-post'>
+                        <Box className='blog-post__img'>
+                          <img src={img} alt={name} className="color" />
+                        </Box>
+                        <Box className='blog-post__info'>
+                          <Box className='blog-post__date'>
+                            <span style={{
                               color: "#20c997"
-                            }}>
-                              {id}.
-                            </Typography>
-                            <Typography variant='h4' sx={{
-                              color: "#4C4D4D"
-                            }}>
-                              {name}
-                            </Typography>
+                            }}>{id}: </span>
+                            <span> {name}</span>
                           </Box>
-                          <Typography sx={{
-                            color: "#324d67",
-                            fontFamily: "sans-serif",
-                            lineHeight: "2em",
-                            textAlign: "justify"
-
-                          }}>
-                            {detail}
-                          </Typography>
-                          <a href={url} target="_blank">
+                          <Typography textAlign="justify">{detail}</Typography>
+                          <a href={url} target="_blank" className='blog-post__cta'>
                             <OpenInNewIcon sx={{
-                              color: "#20c997",
+                              color: "white"
                             }} />
                           </a>
-                        </Grid>
-                        <Grid item sm={4} md={6} className="color" sx={{
-                          boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"
-                        }}>
-                          <img src={img} alt="" width="100%" height="300px" />
-                        </Grid>
-                      </Grid>
+                        </Box>
+                      </Box>
                     ) : (
-                      <Grid container sx={{
-                        width: "100%",
-                        justifyContent: "space-evenly",
-                        alignItems: "center",
-                        marginBottom: "40px",
-                      }}>
-                        <Grid item sm={4} md={6} className="color">
-                          <img src={img} alt="" width="100%" height="300px" sx={{
-                            boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"
-                          }} />
-                        </Grid>
-                        <Grid item sm={4} md={5} sx={{
-                          background: "white",
-                          minHeight: "300px",
-                          padding: "20px",
-                          boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"
-                        }}>
-                          <Box sx={{
-                            display: "flex",
-                          }}>
-                            <Typography variant='h4' sx={{
+                      <Box className='blog-post blog--post' >
+                        <Box className='blog-post__info'>
+                          <Box className='blog-post__date'>
+                            <span style={{
                               color: "#20c997"
-                            }}>
-                              {id}.
-                            </Typography>
-                            <Typography variant='h4' sx={{
-                              color: "#4C4D4D"
-                            }}>
-                              {name}
-                            </Typography>
+                            }}>{id}: </span>
+                            <span> {name}</span>
                           </Box>
-                          <Typography sx={{
-                            color: "#324d67",
-                            fontFamily: "sans-serif",
-                            lineHeight: "2em",
-                            textAlign: "justify"
-                          }}>
-                            {detail}
-                          </Typography>
-                          <a href={url} target="_blank">
+                          <Typography textAlign="justify">{detail}</Typography>
+                          <a href={url} target="_blank" className='blog-post__cta'>
                             <OpenInNewIcon sx={{
-                              color: "#20c997"
+                              color: "white"
                             }} />
                           </a>
-                        </Grid>
-                      </Grid>
+                        </Box>
+                        <Box className='blog-post_img'>
+                          <img src={img} alt={name} />
+                        </Box>
+                      </Box>
                     )
                   }
                 </Box>
               )
             })
           }
-        </Grid>
-      </Grid>
+        </Box>
+        <Box sx={{
+          width: "250px",
+          margin: "auto",
+        }}>
+          <Link to="/project" style={{
+            textDecoration: "none"
+          }}>
+            <Button sx={{
+              width: "200px",
+              background:"#20c997",
+              color:"white",
+              "&:hover":{
+                background:"#20c997",
+                boxShadow:"2px 2px 10px gray"
+              }
+            }}>Show More</Button>
+          </Link>
+        </Box>
+      </Box>
     </>
   )
 }

@@ -19,7 +19,7 @@ const Resume = () => {
         <>
         <Grid container id="resume">
             <Grid xs={12} md={12} sx={{
-                    padding: "30px 30px 30px 30px",
+                    padding: "60px 30px 30px 30px",
             }}>
                 <Typography variant='h4' paddingTop="20px" fontWeight="bold" textAlign="center">My Education</Typography>
                 <Box sx={{

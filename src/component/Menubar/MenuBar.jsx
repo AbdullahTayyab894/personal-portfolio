@@ -14,6 +14,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
+
+
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
@@ -35,54 +37,41 @@ function DrawerAppBar(props) {
         textDecoration: "none",
         color: "white"
       }}>
-        <Typography variant="h6" sx={{ my: 2 }}>
+        <Typography variant="h6" sx={{
+          my: 2,
+          "&:hover": {
+            color: "#20c997"
+          }
+        }}>
           Abdulah Tayyab
         </Typography>
       </Link>
       <Divider />
       <Box className='menu' >
         <List >
-          <a href='#home' style={{
+          <Link to="/about" style={{
             textDecoration: "none",
             color: "white",
           }}>
             <ListItem lineHeight="3em" sx={{
-              '&:hover': {
-                color: "#20c997",
-              },
-            }} >Home</ListItem>
-          </a>
-          <a href='#about' style={{
-            textDecoration: "none",
-            color: "white",
-          }}>
-            <ListItem lineHeight="3em" sx={{
+              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
-            }}>About Me</ListItem>
-          </a>
-          <a href="#skill" style={{
-            textDecoration:"none",
-            color:"white"
-          }}>
-            <ListItem lineHeight="3em" sx={{
-              '&:hover': {
-                color: "#20c997",
-              }
-            }}>What I Do</ListItem>
-          </a>
-          <a href='#resume' style={{
+            }}>About</ListItem>
+          </Link>
+          <Link to="/resume" style={{
             textDecoration: "none",
             color: "white",
           }}>
             <ListItem lineHeight="3em" sx={{
+              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
             }}>Resume</ListItem>
-          </a>
-          <a href='#project' style={{
+          </Link>
+          <Link to="/project" style={{
             textDecoration: "none",
             color: "white",
           }}>
@@ -90,8 +79,8 @@ function DrawerAppBar(props) {
               '&:hover': {
                 color: "#20c997",
               }
-            }}>Portfolio</ListItem>
-          </a>
+            }}>Projects</ListItem>
+          </Link>
         </List>
       </Box>
     </Box>
@@ -123,65 +112,55 @@ function DrawerAppBar(props) {
           >
             <Link to="/" style={{
               textDecoration: "none",
-              color: "white"
+              color: "white",
+
             }}>
-              Abdullah Tayyab
+              <Typography variant="h4" sx={{
+                "&:hover": {
+                  color: "#20c997"
+                }
+              }}>
+                Abdullah Tayyab
+              </Typography>
             </Link>
           </Typography>
           <Box sx={{
             display: { xs: 'none', sm: 'block' },
             justifyContent: "space-between"
           }}>
-            <a href='#home' style={{
+            <Link to="/about" style={{
               textDecoration: "none",
+              color: "white",
             }}>
               <Button lineHeight="3em" sx={{
-                color:"white",
-                '&:hover': {
-                  color: "#20c997",
-                },
-              }} >Home</Button>
-            </a>
-            <a href='#about' style={{
-              textDecoration: "none",
-            }}>
-              <Button lineHeight="3em" sx={{
-                color:"white",
+                color: "white",
                 '&:hover': {
                   color: "#20c997",
                 }
-              }}>About Me</Button>
-            </a>
-            <a href="#skill" style={{
-              textDecoration:"none",
-            }}>
-              <Button lineHeight="3em" sx={{
-                color:"white",
-                '&:hover': {
-                  color: "#20c997",
-                }
-              }}>What I Do</Button>
-            </a>
-            <a href='#resume' style={{
+              }}>About</Button>
+            </Link>
+            <Link to="/resume" style={{
               textDecoration: "none",
+              color: "white",
             }}>
               <Button lineHeight="3em" sx={{
-                color:"white",
+                color: "white",
                 '&:hover': {
                   color: "#20c997",
                 }
               }}>Resume</Button>
-            </a>
-            <a href='#project' style={{
+            </Link>
+            <Link to="/project" style={{
               textDecoration: "none",
+              color: "white",
             }}>
               <Button lineHeight="3em" sx={{
-                color:"white",
+                color: "white",
                 '&:hover': {
                   color: "#20c997",
                 }
-              }}>Portfolio</Button>
-            </a>
+              }}>Projects</Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
