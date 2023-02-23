@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -27,31 +28,47 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{
+    <Box sx={{
       textAlign: 'center',
       background: "black",
       color: "white",
-      height: "100%"
+      height:"100%"
     }}>
-      <Link to="/" style={{
-        textDecoration: "none",
-        color: "white"
-      }}>
-        <Typography variant="h6" sx={{
-          my: 2,
-          "&:hover": {
-            color: "#20c997"
-          }
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        edge="end"
+        onClick={handleDrawerToggle}
+        sx={{
+          mr: -20, display: { sm: 'none' },
+          mt:0.4
+        }}
+      >
+        <CloseIcon sx={{
+          fontSize: "50px"
+        }} />
+      </IconButton>
+      <Divider sx={{
+        borderColor: "white",
+      }} />
+      <Box className='menu'>
+        <List sx={{
+          width: "240px"
         }}>
-          Abdulah Tayyab
-        </Typography>
-      </Link>
-      <Divider />
-      <Box className='menu' >
-        <List >
+          <Link to="/" style={{
+            textDecoration: "none",
+            color: "white"
+          }}>
+            <ListItem sx={{
+              "&:hover": {
+                color: "#20c997"
+              }
+            }}>
+              Home
+            </ListItem>
+          </Link>
           <Link to="/about" style={{
             textDecoration: "none",
-            color: "white",
           }}>
             <ListItem lineHeight="3em" sx={{
               color: "white",
@@ -93,7 +110,9 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component="nav" sx={{
         background: "black",
-        color: "white"
+        color: "white",
+        height: "70px",
+        lineHeight: "5em"
       }}>
         <Toolbar>
           <IconButton
@@ -101,39 +120,57 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 0, display: { sm: 'none' },
+          lineHeight:"3em"
+         }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{
+              fontSize:"50px",
+            }}/>
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h4"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{
+              flexGrow: 1, display: { xs: 'none', sm: 'block' },
+              '&:hover': {
+                color: "#20c997",
+              }
+            }}
           >
             <Link to="/" style={{
               textDecoration: "none",
               color: "white",
-
             }}>
-              <Typography variant="h4" sx={{
-                "&:hover": {
-                  color: "#20c997"
-                }
-              }}>
-                Abdullah Tayyab
-              </Typography>
+              Abdullah Tayyab
             </Link>
           </Typography>
+
           <Box sx={{
             display: { xs: 'none', sm: 'block' },
             justifyContent: "space-between"
           }}>
+             <Link to="/" style={{
+            textDecoration: "none",
+            color: "white"
+          }}>
+            <Button lineHeight="3em" sx={{
+                color: "white",
+                fontSize: "20px",
+                '&:hover': {
+                  color: "#20c997",
+                }
+              }}>
+              Home
+            </Button>
+          </Link>
             <Link to="/about" style={{
               textDecoration: "none",
               color: "white",
             }}>
               <Button lineHeight="3em" sx={{
                 color: "white",
+                fontSize: "20px",
                 '&:hover': {
                   color: "#20c997",
                 }
@@ -144,6 +181,7 @@ function DrawerAppBar(props) {
               color: "white",
             }}>
               <Button lineHeight="3em" sx={{
+                fontSize: "20px",
                 color: "white",
                 '&:hover': {
                   color: "#20c997",
@@ -155,6 +193,7 @@ function DrawerAppBar(props) {
               color: "white",
             }}>
               <Button lineHeight="3em" sx={{
+                fontSize: "20px",
                 color: "white",
                 '&:hover': {
                   color: "#20c997",

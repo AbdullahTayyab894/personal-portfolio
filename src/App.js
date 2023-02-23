@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./component/About/About";
 import Resume from "./component/Resume/Resume";
-import ProjectsDisplay from "./component/Portfolio/ProjectsDisplay";
 import AllProject from "./component/Portfolio/AllProject";
-import Skills from "./component/Services/Skills";
+import Responsive from './component/Skills/SkillSlider'
 import DrawerAppBar from './component/Menubar/MenuBar'
 import DrawerAbout from "./component/Home/Home";
 import Footer from "./component/footer/Footer";
 import MainAbout from "./component/About/MainAbout";
+import HomePageProjects from "./component/Portfolio/HomePageProjects";
 function App() {
   return (
     <div className="App">
@@ -19,8 +19,8 @@ function App() {
             <>
               <DrawerAbout />
               <About />
-              <Skills />
-              <ProjectsDisplay />
+              <Responsive />
+              <HomePageProjects />
             </>} />
             <Route path="/project" element={<AllProject />}/>
             <Route path="/about" element={<MainAbout />}/>

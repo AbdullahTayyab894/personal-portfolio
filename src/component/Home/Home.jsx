@@ -10,7 +10,6 @@ const DrawerAbout = () => {
         backgroundSize: 'cover',
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "100%",
         color: "white",
         display: "flex",
         alignItems: "center",
@@ -20,7 +19,7 @@ const DrawerAbout = () => {
 
     return (
         <div style={divStyle} >
-            <Box id="home" >
+            <Box >
                 <Box textAlign="center" >
                     <Typography variant='h4'>Welcome</Typography>
                     <TypeAnimation
