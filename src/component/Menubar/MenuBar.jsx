@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
       textAlign: 'center',
       background: "black",
       color: "white",
-      height:"100%"
+      height: "100%"
     }}>
       <IconButton
         color="inherit"
@@ -41,11 +41,14 @@ function DrawerAppBar(props) {
         onClick={handleDrawerToggle}
         sx={{
           mr: -20, display: { sm: 'none' },
-          mt:0.4
+          mt: 0.4
         }}
       >
         <CloseIcon sx={{
-          fontSize: "50px"
+          fontSize: "50px",
+          "&:hover": {
+            color: "#20c997"
+          }
         }} />
       </IconButton>
       <Divider sx={{
@@ -120,13 +123,17 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 0, display: { sm: 'none' },
-          lineHeight:"3em"
-         }}
+            sx={{
+              mr: 0, display: { sm: 'none' },
+              lineHeight: "3em"
+            }}
           >
             <MenuIcon sx={{
-              fontSize:"50px",
-            }}/>
+              fontSize: "50px",
+              "&:hover": {
+                color: "#20c997"
+              }
+            }} />
           </IconButton>
           <Typography
             variant="h4"
@@ -150,20 +157,20 @@ function DrawerAppBar(props) {
             display: { xs: 'none', sm: 'block' },
             justifyContent: "space-between"
           }}>
-             <Link to="/" style={{
-            textDecoration: "none",
-            color: "white"
-          }}>
-            <Button lineHeight="3em" sx={{
+            <Link to="/" style={{
+              textDecoration: "none",
+              color: "white"
+            }}>
+              <Button lineHeight="3em" sx={{
                 color: "white",
                 fontSize: "20px",
                 '&:hover': {
                   color: "#20c997",
                 }
               }}>
-              Home
-            </Button>
-          </Link>
+                Home
+              </Button>
+            </Link>
             <Link to="/about" style={{
               textDecoration: "none",
               color: "white",

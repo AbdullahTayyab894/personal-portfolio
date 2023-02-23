@@ -1,7 +1,11 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
 import web4 from "../../images/web4.jpg"
+import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
+import { Link } from 'react-router-dom';
 
 const DrawerAbout = () => {
 
@@ -30,6 +34,20 @@ const DrawerAbout = () => {
                         repeat={Infinity}
                     />
                     <Typography variant='h5'>Based in Kasur,Pakistan</Typography>
+                    <Link to="/about" style={{
+                        textDecoration: "none"
+                    }}>
+                        <IconButton aria-label="Home">
+                            <KeyboardDoubleArrowDownSharpIcon sx={{
+                                color: "white",
+                                paddingTop: "20px",
+                                fontSize: "80px",
+                                "&:hover":{
+                                    color:"#20c997"
+                                }
+                            }} />
+                        </IconButton>
+                    </Link>
                 </Box>
             </Box>
         </div>
