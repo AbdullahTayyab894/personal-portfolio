@@ -15,9 +15,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-
-const drawerWidth = 240;
+const drawerWidth = "100%";
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -34,35 +37,41 @@ function DrawerAppBar(props) {
       color: "white",
       height: "100%"
     }}>
-      <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        edge="end"
-        onClick={handleDrawerToggle}
-        sx={{
-          mr: -20, display: { sm: 'none' },
-          mt: 0.4
-        }}
-      >
-        <CloseIcon sx={{
-          fontSize: "50px",
-          "&:hover": {
-            color: "#20c997"
-          }
-        }} />
-      </IconButton>
+      <Box sx={{
+        display: "flex",
+        ml: "20px",
+        height: "70px",
+      }}>
+        <CloseIcon
+          onClick={handleDrawerToggle}
+          sx={{
+            lineHeight: "5em",
+            marginTop: "9px",
+            fontSize: "50px",
+            "&:hover": {
+              color: "#20c997"
+            }
+          }} />
+      </Box>
       <Divider sx={{
         borderColor: "white",
       }} />
-      <Box className='menu'>
-        <List sx={{
-          width: "240px"
+      <Box className='menu' sx={{
+        width:"100%"
+      }}>
+        <List className='list' sx={{
+          textAlign:"center",
+          width: "100px",
+          margin: "auto",
+          lineHeight: "3em",
+          fontSize: "20px",
         }}>
           <Link to="/" style={{
             textDecoration: "none",
-            color: "white"
+            color: "white",
           }}>
             <ListItem sx={{
+              textAlign: "center",
               "&:hover": {
                 color: "#20c997"
               }
@@ -72,9 +81,9 @@ function DrawerAppBar(props) {
           </Link>
           <Link to="/about" style={{
             textDecoration: "none",
+            color: "white"
           }}>
             <ListItem lineHeight="3em" sx={{
-              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
@@ -85,7 +94,6 @@ function DrawerAppBar(props) {
             color: "white",
           }}>
             <ListItem lineHeight="3em" sx={{
-              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
@@ -102,6 +110,41 @@ function DrawerAppBar(props) {
             }}>Projects</ListItem>
           </Link>
         </List>
+        <Box sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          width: "300px",
+          margin: "auto"
+        }}>
+          <a href="https://www.facebook.com/this.abdullah.8/" target="_black"><FacebookOutlinedIcon sx={{
+            color: "white",
+            fontSize: "40px",
+            "&:hover": {
+              color: "#20c997",
+            }
+          }} /></a>
+          <a href="https://github.com/AbdullahTayyab894" target="_black"><GitHubIcon sx={{
+            color: "white",
+            fontSize: "40px",
+            "&:hover": {
+              color: "#20c997",
+            }
+          }} /></a>
+          <a href="https://www.linkedin.com/in/abdullahtayyab894/" target="_black"><LinkedInIcon sx={{
+            color: "white",
+            fontSize: "40px",
+            "&:hover": {
+              color: "#20c997",
+            }
+          }} /></a>
+          <a href="https://wa.me/+923184579618" target="_black"><WhatsAppIcon sx={{
+            color: "white",
+            fontSize: "40px",
+            "&:hover": {
+              color: "#20c997",
+            }
+          }} /></a>
+        </Box>
       </Box>
     </Box>
   );
@@ -122,21 +165,30 @@ function DrawerAppBar(props) {
             color="inherit"
             aria-label="open drawer"
             edge="start"
-            onClick={handleDrawerToggle}
             sx={{
               mr: 0, display: { sm: 'none' },
-              lineHeight: "3em"
+              lineHeight: "3em",
             }}
           >
-            <MenuIcon sx={{
-              fontSize: "50px",
-              "&:hover": {
-                color: "#20c997"
-              }
-            }} />
+            <MenuIcon
+              onClick={handleDrawerToggle}
+              sx={{
+                fontSize: "45px",
+                "&:hover": {
+                  color: "#20c997"
+                }
+              }} />
+            <Link to="/" style={{
+              textDecoration: "none",
+              color: "white",
+            }}>
+              <Typography variant='h5' sx={{
+                paddingLeft: "30px"
+              }}>Abdullah Tayyab</Typography>
+            </Link>
           </IconButton>
           <Typography
-            variant="h4"
+            variant="h5"
             component="div"
             sx={{
               flexGrow: 1, display: { xs: 'none', sm: 'block' },

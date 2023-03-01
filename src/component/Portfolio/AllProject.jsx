@@ -27,14 +27,15 @@ const AllProject = () => {
                   {
                     id % 2 !== 0 ? (
                       <Grid container sx={{
+                        padding: "0px 20px 0px 20px",
                         width: "100%",
                         justifyContent: "space-evenly",
                         alignItems: "center",
-                        marginBottom: "40px",
+                        // marginBottom: "40px",
                       }}>
                         <Box className='blog-post'>
-                          <Box className='blog-post__img'>
-                            <img src={img} alt={name} className="color"/>
+                          <Box className='blog-post__image'>
+                            <img src={img} alt={name} className="color" />
                           </Box>
                           <Box className='blog-post__info'>
                             <Box className='blog-post__date'>
@@ -54,10 +55,11 @@ const AllProject = () => {
                       </Grid>
                     ) : (
                       <Grid container sx={{
+                        padding: "0px 20px 0px 20px",
                         width: "100%",
                         justifyContent: "space-evenly",
                         alignItems: "center",
-                        marginBottom: "40px",
+                        // marginBottom: "20px",
                       }}>
                         <Box className='blog-post blog--post' >
                           <Box className='blog-post__info'>
@@ -74,8 +76,8 @@ const AllProject = () => {
                               }} />
                             </a>
                           </Box>
-                          <Box className='blog-post_img'>
-                            <img src={img} alt={name} />
+                          <Box className='blog-post__image'>
+                            <img src={img} alt={name} className="color"/>
                           </Box>
                         </Box>
                       </Grid>

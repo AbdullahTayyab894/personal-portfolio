@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { TypeAnimation } from 'react-type-animation';
 import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
 import web4 from "../../images/web4.jpg"
 import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
 import { Link } from 'react-router-dom';
