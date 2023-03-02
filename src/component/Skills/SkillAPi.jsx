@@ -7,6 +7,9 @@ import bs from '../../images/bs.png'
 import git from '../../images/git.png'
 import vs from '../../images/vs.png'
 import npm from '../../images/npm.png'
+import nodejs from '../../images/nodejs.png'
+import express from '../../images/express.png'
+import mongodb from '../../images/mongodb.png'
 
 export const SkillApi = [
     {
@@ -53,5 +56,20 @@ export const SkillApi = [
         id:9,
         img:npm,
         name:"npm Libraries"
+    },
+    {
+        id:10,
+        img:nodejs,
+        name:"Node JS"
+    },
+    {
+        id:11,
+        img:express,
+        name:"Express JS"
+    },
+    {
+        id:12,
+        img:mongodb,
+        name:"MongoDB"
     },
 ]

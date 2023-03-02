@@ -26,7 +26,7 @@ const DrawerAbout = () => {
                 <Box textAlign="center" >
                     <Typography variant='h4'>Welcome</Typography>
                     <TypeAnimation
-                        sequence={["I'm Abdullah Tayyab.", 2000, "I'm a Mern Stack Front-End Developer.", 2000]}
+                        sequence={["I'm Abdullah Tayyab.", 2000, "I'm a Mern Stack Developer.", 2000]}
                         speed={10}
                         deletionSpeed={50}
                         wrapper="h1"

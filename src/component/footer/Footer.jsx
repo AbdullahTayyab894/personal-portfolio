@@ -55,8 +55,9 @@ const Footer = () => {
             }}>
                 <SpeedDial
                     ariaLabel="SpeedDial basic example"
-                    sx={{ position: 'absolute', bottom: 16, right: 16}}
-                    icon={<ContactSupportOutlinedIcon  />}
+                    sx={{ position: 'absolute', bottom: 16, right: 16,
+                }}
+                    icon={<ContactSupportOutlinedIcon />}
                 >
                     {actions.map((action) => (
                         <SpeedDialAction

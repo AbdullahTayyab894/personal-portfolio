@@ -6,8 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Toolbar from '@mui/material/Toolbar';
@@ -32,14 +30,16 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box sx={{
+      position: 'relative',
       textAlign: 'center',
-      background: "black",
+      background: "#20262E",
       color: "white",
       height: "100%"
     }}>
       <Box sx={{
-        display: "flex",
-        ml: "20px",
+        position: "absolute",
+        right: 0,
+        mr: "20px",
         height: "70px",
       }}>
         <CloseIcon
@@ -57,60 +57,66 @@ function DrawerAppBar(props) {
         borderColor: "white",
       }} />
       <Box className='menu' sx={{
-        width:"100%"
+        width: "100%",
+        marginTop: "60px"
       }}>
-        <List className='list' sx={{
-          textAlign:"center",
+        <Box sx={{
+          textAlign: "center",
           width: "100px",
           margin: "auto",
-          lineHeight: "3em",
+          lineHeight: "3.5em",
           fontSize: "20px",
         }}>
           <Link to="/" style={{
             textDecoration: "none",
             color: "white",
           }}>
-            <ListItem sx={{
+            <Button sx={{
+              color: "white",
               textAlign: "center",
               "&:hover": {
                 color: "#20c997"
               }
             }}>
               Home
-            </ListItem>
+            </Button>
           </Link>
           <Link to="/about" style={{
             textDecoration: "none",
             color: "white"
           }}>
-            <ListItem lineHeight="3em" sx={{
+            <Button lineHeight="3em" sx={{
+              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
-            }}>About</ListItem>
+            }}>About</Button>
           </Link>
           <Link to="/resume" style={{
             textDecoration: "none",
             color: "white",
           }}>
-            <ListItem lineHeight="3em" sx={{
+            <Button lineHeight="3em" sx={{
+              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
-            }}>Resume</ListItem>
+            }}>Resume</Button>
           </Link>
           <Link to="/project" style={{
             textDecoration: "none",
             color: "white",
           }}>
-            <ListItem lineHeight="3em" sx={{
+            <Button lineHeight="3em" sx={{
+              color: "white",
               '&:hover': {
                 color: "#20c997",
               }
-            }}>Projects</ListItem>
+            }}>Projects</Button>
           </Link>
-        </List>
+        </Box>
         <Box sx={{
+          paddingTop: "20px",
           display: "flex",
           justifyContent: "space-around",
           width: "300px",
@@ -155,12 +161,29 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar component="nav" sx={{
-        background: "black",
-        color: "white",
-        height: "70px",
-        lineHeight: "5em"
+        background: "#20262E",
+        height: "65px",
       }}>
         <Toolbar>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{
+              flexGrow: 1, display: { xs: 'block', sm: 'block' },
+              paddingLeft: "25px",
+              '&:hover': {
+                color: "#20c997",
+              }
+            }}
+          >
+            <Link to="/" style={{
+              textDecoration: "none",
+              color: "white",
+            }}>
+              Abdullah Tayyab
+            </Link>
+          </Typography>
+
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -178,37 +201,13 @@ function DrawerAppBar(props) {
                   color: "#20c997"
                 }
               }} />
-            <Link to="/" style={{
-              textDecoration: "none",
-              color: "white",
-            }}>
-              <Typography variant='h5' sx={{
-                paddingLeft: "30px"
-              }}>Abdullah Tayyab</Typography>
-            </Link>
           </IconButton>
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{
-              flexGrow: 1, display: { xs: 'none', sm: 'block' },
-              '&:hover': {
-                color: "#20c997",
-              }
-            }}
-          >
-            <Link to="/" style={{
-              textDecoration: "none",
-              color: "white",
-            }}>
-              Abdullah Tayyab
-            </Link>
-          </Typography>
 
           <Box sx={{
             display: { xs: 'none', sm: 'block' },
-            justifyContent: "space-between"
+            justifyContent: "space-between",
           }}>
+
             <Link to="/" style={{
               textDecoration: "none",
               color: "white"
